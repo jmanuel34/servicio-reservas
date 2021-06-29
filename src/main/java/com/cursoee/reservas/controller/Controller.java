@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cursoee.reservas.model.Hotel;
 import com.cursoee.reservas.model.Reserva;
 import com.cursoee.reservas.service.ReservasService;
 
@@ -34,7 +35,12 @@ ReservasService service;
 	@ApiOperation("Devuelve las reservas de un hotel a partir de su nombre")
 	@GetMapping(value="reservas/{hotel}", produces=MediaType.APPLICATION_JSON_VALUE)
 	public List<Reserva> reservas(@PathVariable("hotel") String hotel) {
-		return service.consultar(hotel);		
+		List<Reserva> reservas=null;
+		reservas = this.service.consultar(hotel);
+		for (Reserva r:reservas) {
+			System.out.println("Controller reservas: "+r.getNombre());
+		}
+		return reservas;	
 	}
 
 }
