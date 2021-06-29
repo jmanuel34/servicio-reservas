@@ -32,9 +32,9 @@ ReservasService service;
 	
 	// Solo visible para usuario administrador
 	@ApiOperation("Devuelve las reservas de un hotel a partir de su nombre")
-	@GetMapping(value="reservas/{nombre}", produces=MediaType.APPLICATION_JSON_VALUE)
-	public List<Reserva> reservas(@PathVariable("nombre") String nombre) {
-		return service.consultar(nombre);		
+	@GetMapping(value="reservas/{hotel}", produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Reserva> reservas(@PathVariable("hotel") String hotel) {
+		return service.consultar(hotel);		
 	}
 
 }
