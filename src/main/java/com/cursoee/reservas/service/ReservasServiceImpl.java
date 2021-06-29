@@ -27,7 +27,7 @@ public class ReservasServiceImpl implements ReservasService {
 	@Override
 	public boolean reservar(Reserva reserva, Integer plazas) {
 		
-		// Podria ser necesaria la interaccion con servicio-vuelos y servicio-hoteles
+		// Es necesaria la interaccion con servicio-vuelos y servicio-hoteles
 		// La reserva viene con idVuelo e idHotel y cantidad de personas
 		// para reservar en los hoteles
 		
