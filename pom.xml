@@ -19,10 +19,8 @@
 		<spring-cloud.version>Hoxton.SR6</spring-cloud.version>
 		<!--  Quitado para servidor Eureka 
 		<spring-cloud.version>2020.0.3</spring-cloud.version> -->
-		
 	</properties>
 	<dependencies>
-
 		<!-- Servidor de configuracion -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -54,7 +52,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+<!-- Anotaciones -->		
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
